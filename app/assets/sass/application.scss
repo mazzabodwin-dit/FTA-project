@@ -4,3 +4,109 @@
 // 
 
 // Add extra styles here
+
+// Country bargraph https://codepen.io/inegoita/pen/JVNNyw 
+
+.autocomplete__wrapper * {
+ @include govuk-typography-common();
+}
+
+.chart-wrap {
+ height: 600px;
+}
+
+.chart-wrap .title {
+ text-align: center;
+}
+
+.grid {
+ width: 100%;
+ height: 100%;
+ display: flex;
+ flex-direction: row;
+ justify-content: center;
+ border-bottom: 2px solid white;
+ background: repeating-linear-gradient(0deg, transparent, transparent 19.5%, rgba(170, 170, 170, 0.7) 10%);
+}
+.grid .bar {
+ background-color: #F16335;
+ width: 45px;
+ height: var(--bar-value);
+ align-self: flex-end;
+ margin: 0 auto;
+ border-radius: 3px 3px 0 0;
+ position: relative;
+}
+.grid .bar.bar:hover {
+ opacity: 0.7;
+}
+
+.left .grid .bar::before {
+ content: attr(data-name);
+ top: 0em;
+ padding: 10px;
+ display: inline-block;
+ white-space: nowrap;
+ position: absolute;
+ transform: rotate(0deg);
+}
+
+.right .grid .bar::after {
+ content: attr(data-name);
+ top: -3em;
+ padding: 10px;
+ display: inline-block;
+ white-space: nowrap;
+ position: absolute;
+ transform: rotate(-45deg);
+}
+
+.grid.horizontal {
+ flex-direction: column;
+ border-bottom: none;
+ border: 2px solid red;
+ background: repeating-linear-gradient(transparent, transparent 19.5%, rgba(170, 170, 170, 0.7) 10%);
+}
+
+.left .grid.horizontal .bar {
+ height: 45px;
+ width: var(--bar-value);
+ align-self: flex-end;
+ margin: auto 0 auto 0;
+ border-radius: 0 3px 3px 0;
+}
+
+.right .grid.horizontal .bar {
+ height: 45px;
+ width: var(--bar-value);
+ align-self: flex-start;
+ margin: auto 0 auto 0;
+ border-radius: 0 3px 3px 0;
+}
+
+
+.left .grid.horizontal .bar::before {
+ top: initial;
+ right: 0%;
+ padding: 0 10px;
+ display: inline-block;
+ white-space: nowrap;
+ position: absolute;
+ transform: rotate(0deg);
+ line-height: 45px;
+ margin-right: 0px;
+}
+
+.right .grid.horizontal .bar::after {
+ top: initial;
+ left: 0%;
+ padding: 0 10px;
+ display: inline-block;
+ white-space: nowrap;
+ position: absolute;
+ transform: rotate(0deg);
+ line-height: 45px;
+ margin-right: 0px;
+}
+
+//

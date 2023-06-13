@@ -1,0 +1,89 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Export or Not?
+      </h1>
+      <p>Some lovely words about what the hell is going on.</p>
+
+      <form class="form" action="step1.1" method="post">
+
+        {% include "includes/country-list.html" %}
+
+        <div class="govuk-form-group govuk-!-width-three-quarters">
+          <h2 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--m" for="search-commodity">
+              What is your product?
+            </label>
+          </h2>
+          <select class="govuk-select autocomplete-select" id="search-commodity" name="search-commodity" autocomplete-placeholder="Enter the name of the product or commodity code">
+            <option value="" class="selected"></option>
+            <option value="AD2224 - Steel plate from Russia" id="1">7222202100 </option>
+            <option value="AD2224 - Steel plate from Russia" id="2">7222202900</option>
+            <option value="AD2224 - Steel plate from Russia" id="3">7222203100</option>
+            <option value="AD2224 - Steel plate from Russia" id="single">AD2224 - Steel plate from Russia</option>
+            <option value="AD3245 - Steel balls from Murcia" id="4">AD3245 - Steel balls from Murcia</option>
+          </select>
+        </div>
+
+        <div class="app-step-nav-header" id="selected_commodity_wrapper" style="display:none;">
+           <h2 class="govuk-heading-m">Select your product</h2>
+          <ul class="govuk-list">
+            <li id="selected_commodity2" style="display:none;"><a href="step1-market-overivew" class="govuk-link--no-visited-state">AS0020 - Ironing Boards from Turkey</a></li>
+            <li><a href="step1-market-overivew" class="govuk-link--no-visited-state" id="selected_commodity"></a></li>
+          </ul>
+        </div>
+
+
+        <div class="govuk-inset-text" id="selected_commodity_wrapper" style="display:none;">
+          <h2 class="govuk-heading-m">Select your product</h2>
+          <ul class="govuk-list">
+            <li id="selected_commodity2" style="display:none;"><a href="step1-market-overivew" class="govuk-link--no-visited-state">AS0020 - Ironing Boards from Turkey</a></li>
+            <li><a href="step1-market-overivew" class="govuk-link--no-visited-state" id="selected_commodity"></a></li>
+          </ul>
+        </div>
+        <br><br>
+
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Learn about different markets
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            Some markets are great. Some have Free Trade Agreements and this means some things you should know.
+          </div>
+        </details>
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Learn about products
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            Search for your product and stuff
+          </div>
+        </details>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
