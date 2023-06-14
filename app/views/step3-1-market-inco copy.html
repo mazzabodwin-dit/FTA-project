@@ -20,18 +20,43 @@
           <a href="step1" class="govuk-link--no-visited-state">Change product</a>
         </span>
       </h1>
-      <p>Some lovely words about what the hell is going on.gdfljkljikf. Some lovely words about what the hell is going on.gdfljkljikf</p>
+      <p>Based on your information, we would recommend using an <strong>FTO</strong> or <strong>CTO</strong> Incoterm to export your product. Use the jobby below to change Incoterms or compare against other faviourable markets.</p>
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Incoterms - what are they?
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          FTO, CTO etc etc things
+        </div>
+      </details>
     </div>
   </div>
 
   <div class="govuk-grid-row ">
-    <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-grid-column-two-fifths">
+      <div class="govuk-form-group">
+      <label class="govuk-label" for="sort">
+        Choose recommended Incoterm
+      </label>
+      <select class="govuk-select" id="sort" name="sort">
+        <option value="published">FTO</option>
+        <option value="updated" selected>Recently updated</option>
+        <option value="views">Most views</option>
+        <option value="comments">Most comments</option>
+      </select>
+    </div>
       <h2 class="govuk-heading-m">Mexico
         <span class="edit-link govuk-body">
           <a href="step1" class="govuk-link--no-visited-state">Change market</a>
         </span>
       </h2>
-      <p>Some lovely words about the market and the product? Some lovely words about the market and the product? Some lovely words about the market and the product?</p>
+    </div>
+    <div class="govuk-grid-column-one-fifth">
+        <h2 class="govuk-visually-hidden">Values</h2>
+    </div>
+    <div class="govuk-grid-column-two-fifths">
     </div>
   </div>
  
@@ -40,6 +65,7 @@
     <div class="govuk-grid-column-one-fifth">
       <div class="chart-wrap value left-value">
         <div class="grid horizontal ">
+          <div class="bar govuk-body">Incoterms</div>
           <div class="bar govuk-body">Your Blog</div>
           <div class="bar govuk-body">Medium</div>
           <div class="bar govuk-body">Tumblr</div>
@@ -56,6 +82,7 @@
     <div class="govuk-grid-column-two-fifths">
       <div class="chart-wrap right">
         <div class="grid horizontal">
+          <div class="bar govuk-body" style="--bar-value:100%;" data-name="FTO £2000" title="FTO icoterm £2000"></div>
           <div class="bar govuk-body" style="--bar-value:85%;" data-name="85%" title="Your Blog 85%"></div>
           <div class="bar govuk-body" style="--bar-value:23%;" data-name="23%" title="Medium 23%"></div>
           <div class="bar govuk-body" style="--bar-value:7%;" data-name="7%" title="Tumblr 7%"></div>
@@ -73,10 +100,11 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <br>
+      
+
       {{ govukButton({
-        text: "Calculate your export costs",
-        href: "step2"
+        text: "Something",
+        href: ""
       }) }}
     </div>
   </div>

@@ -17,10 +17,21 @@
     <div class="govuk-grid-column-full">
       <h1 class="govuk-heading-l">Product name
         <span class="edit-link govuk-body">
-          <a href="step1" class="govuk-link--no-visited-state">Edit product</a>
+          <a href="step1" class="govuk-link--no-visited-state">Change product</a>
         </span>
       </h1>
       <p>Some lovely words about what the hell is going on.gdfljkljikf</p>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="sort">
+          Change Incoterm
+        </label>
+        <select class="govuk-select" id="sort" name="sort">
+          <option value="published">Recently published</option>
+          <option value="updated" selected>Recently updated</option>
+          <option value="views">Most views</option>
+          <option value="comments">Most comments</option>
+        </select>
+      </div>
     </div>
   </div>
 
@@ -28,15 +39,15 @@
     <div class="govuk-grid-column-two-fifths">
       <h2 class="govuk-heading-m">Mexico
         <span class="edit-link govuk-body">
-          <a href="step1" class="govuk-link--no-visited-state">Edit market</a>
+          <a href="step1" class="govuk-link--no-visited-state">Change market</a>
         </span>
       </h2>
     </div>
     <div class="govuk-grid-column-one-fifth">
-        <h2 class="govuk-visually-hidden">Values</h2>
+      <h2 class="govuk-heading-m">_</h2>
     </div>
     <div class="govuk-grid-column-two-fifths">
-        <h2 class="govuk-heading-s">Somewhere over the ranibow</h2>
+      <h2 class="govuk-heading-m">Chili</h2>
     </div>
   </div>
  
@@ -58,7 +69,7 @@
     </div>
         
     <div class="govuk-grid-column-one-fifth">
-      <div class="chart-wrap center">
+      <div class="chart-wrap value center-value">
         <div class="grid horizontal ">
            <div class="bar govuk-body">Your Blog</div>
           <div class="bar govuk-body">Medium</div>
