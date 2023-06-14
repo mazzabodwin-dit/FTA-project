@@ -1,0 +1,130 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Product details – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Experience, effort and risk 
+      </h1>
+      <p>According to your experience and the amount of effort and risk you are willing to accept there are different ways to export goods abroad.</p>
+
+      <form action="step3-1-market-inco" method="post">
+
+        {{ govukRadios({
+          classes: "govuk-radios--inline",
+          name: "confidence",
+          fieldset: {
+            legend: {
+              text: "Rate your confidence in exporting ",
+              isPageHeading: false,
+              classes: "govuk-fieldset__legend--s"
+            }
+          },
+          items: [
+            {
+              value: "Low",
+              text: "Low"
+            },
+            {
+              value: "Medium",
+              text: "Medium"
+            }
+            ,
+            {
+              value: "High",
+              text: "High"
+            }
+          ]
+        }) }}
+
+        {{ govukRadios({
+          classes: "govuk-radios--inline",
+          name: "capacity",
+          fieldset: {
+            legend: {
+              text: "Rate your capacity/ desire?? to organise everything without the use of a 3rd party",
+              isPageHeading: false,
+              classes: "govuk-fieldset__legend--s"
+            }
+          },
+          items: [
+            {
+              value: "Low",
+              text: "Low"
+            },
+            {
+              value: "Medium",
+              text: "Medium"
+            }
+            ,
+            {
+              value: "High",
+              text: "High"
+            }
+          ]
+        }) }}
+
+        {{ govukRadios({
+          classes: "govuk-radios--inline",
+          name: "risk",
+          fieldset: {
+            legend: {
+              text: "Rate how confident your are in taking on the risk and responsibility of exporting the goods to the final destination market",
+              isPageHeading: false,
+              classes: "govuk-fieldset__legend--s"
+            }
+          },
+          items: [
+            {
+              value: "Low",
+              text: "Low"
+            },
+            {
+              value: "Medium",
+              text: "Medium"
+            }
+            ,
+            {
+              value: "High",
+              text: "High"
+            }
+          ]
+        }) }}
+
+       
+
+        {{ govukButton({
+          text: "Next"
+        }) }}
+
+       
+
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Some help here?
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <p>Words of joy</p>
+          </div>
+        </details>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}
