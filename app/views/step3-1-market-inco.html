@@ -20,7 +20,7 @@
           <a href="step1" class="govuk-link--no-visited-state">Change product</a>
         </span>
       </h1>
-      <p>Based on your information, we have calculated your export costs using  <strong>CIF Incoterm</strong>.</p>
+      <p>Based on your information, we would recommend using an <strong>EX-Works</strong>, <strong>FOB</strong>, or <strong>CIF</strong> Incoterm to export your product. Use the jobby below to change Incoterms or compare against other faviourable markets.</p>
       <details class="govuk-details" data-module="govuk-details">
         <summary class="govuk-details__summary">
           <span class="govuk-details__summary-text">
@@ -31,117 +31,101 @@
           FTO, CTO etc etc things
         </div>
       </details>
-      <div class="govuk-inset-text">
-        CIF Incoterms export costs: £2000
-      </div>
-
+    </div> 
+  </div>
+  <div class="govuk-grid-row ">
+      <div class="govuk-grid-column-full">
+        <form class="form" action="step3-1-market-compare" method="post">
+          <table class="govuk-table">
+            <caption class="govuk-table__caption govuk-table__caption--m">Incoterm comparison</caption>
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header"><span class="govuk-visually-hidden">Value: </span></th>
+                <th scope="col" class="govuk-table__header">Ex-works</th>
+                <th scope="col" class="govuk-table__header">FOB</th>
+                <th scope="col" class="govuk-table__header">CIF</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Costing</th>
+                <td class="govuk-table__cell"></td>
+                <td class="govuk-table__cell"></td>
+                <td class="govuk-table__cell"></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Invoice price</th>
+                <td class="govuk-table__cell">£10000</td>
+                <td class="govuk-table__cell">£10000</td>
+                <td class="govuk-table__cell">£10000</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Shipping</th>
+                <td class="govuk-table__cell">£1000</td>
+                <td class="govuk-table__cell">N/A</td>
+                <td class="govuk-table__cell">£2000</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Insurance</th>
+                <td class="govuk-table__cell">£400</td>
+                <td class="govuk-table__cell">N/A</td>
+                <td class="govuk-table__cell">£1000</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">VAT</th>
+                <td class="govuk-table__cell">£400</td>
+                <td class="govuk-table__cell">N/A</td>
+                <td class="govuk-table__cell">£10</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"></th>
+                <td class="govuk-table__header">£2800</td>
+                <td class="govuk-table__header">£1000</td>
+                <td class="govuk-table__header">£1034</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Features</th>
+                <td class="govuk-table__cell"></td>
+                <td class="govuk-table__cell"></td>
+                <td class="govuk-table__cell"></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">FTA</th>
+                <td class="govuk-table__cell">Yes</td>
+                <td class="govuk-table__cell">No</td>
+                <td class="govuk-table__cell">No</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Rules or origin</th>
+                <td class="govuk-table__cell">Yes when FTA</td>
+                <td class="govuk-table__cell">No</td>
+                <td class="govuk-table__cell">No</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"></th>
+                <td class="govuk-table__cell">
+                  <button class="govuk-button govuk-button--secondary comparison" data-module="govuk-button">
+                    Choose me
+                  </button>
+                </td>
+                <td class="govuk-table__cell">
+                  <button class="govuk-button comparison" data-module="govuk-button">
+                    Choose me
+                  </button>
+                </td>
+                <td class="govuk-table__cell">
+                  <button class="govuk-button govuk-button--secondary comparison" data-module="govuk-button">
+                    Choose me
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </form>
     </div>
   </div>
 
+
  
- 
-
-
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-
-      <h2 class="govuk-heading-m">
-        Experience, effort and risk 
-      </h2>
-      <p>According to your experience and the amount of effort and risk you are willing to accept there are different ways to export goods abroad.</p>
-
-      <form action="step3-1-market-inco2" method="post">
-
-        {{ govukRadios({
-          classes: "govuk-radios--inline",
-          name: "confidence",
-          fieldset: {
-            legend: {
-              text: "Rate your confidence in exporting ",
-              isPageHeading: false,
-              classes: "govuk-fieldset__legend--s"
-            }
-          },
-          items: [
-            {
-              value: "Low",
-              text: "Low"
-            },
-            {
-              value: "Medium",
-              text: "Medium"
-            }
-            ,
-            {
-              value: "High",
-              text: "High"
-            }
-          ]
-        }) }}
-
-        {{ govukRadios({
-          classes: "govuk-radios--inline",
-          name: "capacity",
-          fieldset: {
-            legend: {
-              text: "Rate your capacity/ desire?? to organise everything without the use of a 3rd party",
-              isPageHeading: false,
-              classes: "govuk-fieldset__legend--s"
-            }
-          },
-          items: [
-            {
-              value: "Low",
-              text: "Low"
-            },
-            {
-              value: "Medium",
-              text: "Medium"
-            }
-            ,
-            {
-              value: "High",
-              text: "High"
-            }
-          ]
-        }) }}
-
-        {{ govukRadios({
-          classes: "govuk-radios--inline",
-          name: "risk",
-          fieldset: {
-            legend: {
-              text: "Rate how confident your are in taking on the risk and responsibility of exporting the goods to the final destination market",
-              isPageHeading: false,
-              classes: "govuk-fieldset__legend--s"
-            }
-          },
-          items: [
-            {
-              value: "Low",
-              text: "Low"
-            },
-            {
-              value: "Medium",
-              text: "Medium"
-            }
-            ,
-            {
-              value: "High",
-              text: "High"
-            }
-          ]
-        }) }}
-
-       
-
-        {{ govukButton({
-          text: "Next"
-        }) }}
-
-       
-      </form>
-    </div>
-  </div>
 
 {% endblock %}

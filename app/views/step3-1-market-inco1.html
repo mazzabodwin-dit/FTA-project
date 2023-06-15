@@ -1,0 +1,147 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-l">Product name
+        <span class="edit-link govuk-body">
+          <a href="step1" class="govuk-link--no-visited-state">Change product</a>
+        </span>
+      </h1>
+      <p>Based on your information, we have calculated your export costs using  <strong>CIF Incoterm</strong>.</p>
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Incoterms - what are they?
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          FTO, CTO etc etc things
+        </div>
+      </details>
+      <div class="govuk-inset-text">
+        CIF Incoterms export costs: £2000
+      </div>
+
+    </div>
+  </div>
+
+ 
+ 
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h2 class="govuk-heading-m">
+        Experience, effort and risk 
+      </h2>
+      <p>According to your experience and the amount of effort and risk you are willing to accept there are different ways to export goods abroad.</p>
+
+      <form action="step3-1-market-inco2" method="post">
+
+        {{ govukRadios({
+          classes: "govuk-radios--inline",
+          name: "confidence",
+          fieldset: {
+            legend: {
+              text: "Rate your confidence in exporting ",
+              isPageHeading: false,
+              classes: "govuk-fieldset__legend--s"
+            }
+          },
+          items: [
+            {
+              value: "Low",
+              text: "Low"
+            },
+            {
+              value: "Medium",
+              text: "Medium"
+            }
+            ,
+            {
+              value: "High",
+              text: "High"
+            }
+          ]
+        }) }}
+
+        {{ govukRadios({
+          classes: "govuk-radios--inline",
+          name: "capacity",
+          fieldset: {
+            legend: {
+              text: "Rate your capacity/ desire?? to organise everything without the use of a 3rd party",
+              isPageHeading: false,
+              classes: "govuk-fieldset__legend--s"
+            }
+          },
+          items: [
+            {
+              value: "Low",
+              text: "Low"
+            },
+            {
+              value: "Medium",
+              text: "Medium"
+            }
+            ,
+            {
+              value: "High",
+              text: "High"
+            }
+          ]
+        }) }}
+
+        {{ govukRadios({
+          classes: "govuk-radios--inline",
+          name: "risk",
+          fieldset: {
+            legend: {
+              text: "Rate how confident your are in taking on the risk and responsibility of exporting the goods to the final destination market",
+              isPageHeading: false,
+              classes: "govuk-fieldset__legend--s"
+            }
+          },
+          items: [
+            {
+              value: "Low",
+              text: "Low"
+            },
+            {
+              value: "Medium",
+              text: "Medium"
+            }
+            ,
+            {
+              value: "High",
+              text: "High"
+            }
+          ]
+        }) }}
+
+       
+
+        {{ govukButton({
+          text: "Next"
+        }) }}
+
+       
+      </form>
+    </div>
+  </div>
+
+{% endblock %}
