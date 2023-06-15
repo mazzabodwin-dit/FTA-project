@@ -17,6 +17,11 @@
  overflow: auto;
 }
 
+//Hide text but keep space
+.hide {
+  visibility: hidden;
+}
+
 // Adding new grid patterns
 .govuk-grid-column-one-fifth {
  width: 20%;
@@ -88,7 +93,7 @@ padding: 0 15px;
 }
 
 .empty .grid .bar  {
-  background-color: #d2a2b8;
+  background-color: #f3f2f1;
  }
 
  .recommended  {

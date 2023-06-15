@@ -23,13 +23,13 @@
       </h1>
       <p>Some lovely words about what the hell is going on.gdfljkljikf</p>
       <div class="govuk-form-group">
-        <label class="govuk-label" for="sort">
+        <label class="govuk-label" for="inco">
           Change Incoterm
         </label>
-        <select class="govuk-select" id="sort" name="sort">
-          <option value="published">FOB</option>
-          <option value="updated" selected>CIF</option>
-          <option value="views">Ex-works</option>
+        <select class="govuk-select" id="inco" name="inco" onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
+          <option {{ "selected" if data["inco"] == "FOB" }} value="?inco=FOB" selected>FOB</option>
+          <option {{ "selected" if data["inco"] == "CIF landed" }} value="?inco=CIF landed">CIF landed</option>
+          <option {{ "selected" if data["inco"] == "Ex-works" }} value="?inco=Ex-works">Ex-works</option>
         </select>
       </div>
     </div>
@@ -38,20 +38,30 @@
   <div class="govuk-grid-row ">
     <div class="govuk-grid-column-two-fifths">
       <h2 class="govuk-heading-m">Mexico
-        <span class="edit-link govuk-body">
-          <a href="step1" class="govuk-link--no-visited-state">Change market</a>
-        </span>
       </h2>
     </div>
     <div class="govuk-grid-column-one-fifth">
-      <h2 class="govuk-heading-m">_</h2>
+      <h2 class="govuk-heading-m hide">Values</h2>
     </div>
     <div class="govuk-grid-column-two-fifths">
-      <h2 class="govuk-heading-m">Chili
-        <span class="edit-link govuk-body">
-          <a href="step1" class="govuk-link--no-visited-state">Change market</a>
-        </span>
-      </h2>
+       <div class="govuk-form-group">
+        <label class="govuk-label govuk-visually-hidden" for="compare">
+          Compare markets
+        </label>
+        <select class="govuk-select" id="compare" name="compare" onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
+          <option value="published">Compare markets</option>
+          <optgroup label="FTA Partners">
+            <option {{ "selected" if data["country"] == "Australia" }} value="?country=Australia">Australia</option>
+            <option {{ "selected" if data["country"] == "Brunei" }} value="?country=Brunei">Brunei</option>
+            <option {{ "selected" if data["country"] == "Cambodia" }} value="?country=Cambodia">Cambodia</option>
+          </optgroup>
+          <option>----------</option>
+          <optgroup label="Non-FTA Partners">
+            <option {{ "selected" if data["country"] == "Afghanistan" }} value="?country=Afghanistan">Afghanistan</option>  
+            <option {{ "selected" if data["country"] == "Aland Islands"  }} value="?country=Aland Islands">Aland Islands</option>
+          </optgroup>
+        </select>
+      </div>
     </div>
   </div>
  
@@ -60,7 +70,7 @@
     <div class="govuk-grid-column-two-fifths">
       <div class="chart-wrap left">
         <div class="grid horizontal">
-          <div class="bar govuk-body" style="--bar-value:85%;" data-name="85%" title="Your Blog 85%"></div>
+          <div class="bar govuk-body" style="--bar-value:85%;" data-name="Your 85%" title="Your Blog 85%"></div>
           <div class="bar govuk-body" style="--bar-value:23%;" data-name="23%" title="Medium 23%"></div>
           <div class="bar govuk-body" style="--bar-value:7%;" data-name="7%" title="Tumblr 7%"></div>
           <div class="bar govuk-body" style="--bar-value:38%;" data-name="38%" title="Facebook 38%"></div>
@@ -89,19 +99,118 @@
     </div>
 
     <div class="govuk-grid-column-two-fifths">
-      <div class="chart-wrap right">
+      <div class="chart-wrap right empty">
         <div class="grid horizontal">
-         <div class="bar govuk-body" style="--bar-value:85%;" data-name="85%" title="Your Blog 85%"></div>
-          <div class="bar govuk-body" style="--bar-value:23%;" data-name="23%" title="Medium 23%"></div>
-          <div class="bar govuk-body" style="--bar-value:7%;" data-name="7%" title="Tumblr 7%"></div>
-          <div class="bar govuk-body" style="--bar-value:38%;" data-name="38%" title="Facebook 38%"></div>
-          <div class="bar govuk-body" style="--bar-value:35%;" data-name="35%" title="YouTube 35%"></div>
-          <div class="bar govuk-body" style="--bar-value:30%;" data-name="30%" title="LinkedIn 30%"></div>
-          <div class="bar govuk-body" style="--bar-value:5%;" data-name="5%" title="Twitter 5%"></div>
-          <div class="bar govuk-body" style="--bar-value:20%;" data-name="20%" title="Other 20%"></div>
+          <div class="bar govuk-body" style="--bar-value:25%;" title="Your Blog 25%"></div>
+          <div class="bar govuk-body" style="--bar-value:25%;" title="Medium 25%"></div>
+          <div class="bar govuk-body" style="--bar-value:25%;" title="Tumblr 25%"></div>
+          <div class="bar govuk-body" style="--bar-value:25%;" title="Facebook 25%"></div>
+          <div class="bar govuk-body" style="--bar-value:25%;" title="YouTube 25%"></div>
+          <div class="bar govuk-body" style="--bar-value:25%;" title="LinkedIn 25%"></div>
+          <div class="bar govuk-body" style="--bar-value:25%;" title="Twitter 25%"></div>
+          <div class="bar govuk-body" style="--bar-value:25%;" title="Other 25%"></div>
         </div>
       </div>
     </div>    
+
+    <table class="govuk-table">
+          <caption class="govuk-table__caption govuk-table__caption--m">Incoterm comparison</caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header"><span class="govuk-visually-hidden">Value: </span></th>
+              <th scope="col" class="govuk-table__header">Ex-works</th>
+              <th scope="col" class="govuk-table__header govuk-!-font-size-24">FOB</th>
+              <th scope="col" class="govuk-table__header">CIF Landed</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Costs (approximate)</th>
+              <td class="govuk-table__cell"></td>
+              <td class="govuk-table__cell"></td>
+              <td class="govuk-table__cell"></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Invoice price</th>
+              <td class="govuk-table__cell">£10,000</td>
+              <td class="govuk-table__cell">£10,000</td>
+              <td class="govuk-table__cell">£10,000</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Customs *MFN 10% duty</th>
+              <td class="govuk-table__cell">-</td>
+              <td class="govuk-table__cell">£1,000</td>
+              <td class="govuk-table__cell">£1,000</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Taxes *VAT 20%</th>
+              <td class="govuk-table__cell">-</td>
+              <td class="govuk-table__cell">-</td>
+              <td class="govuk-table__cell">£2,200</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Handling</th>
+              <td class="govuk-table__cell">-</td>
+              <td class="govuk-table__cell">£500</td>
+              <td class="govuk-table__cell">£500</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Shipping</th>
+              <td class="govuk-table__cell">-</td>
+              <td class="govuk-table__cell">-</td>
+              <td class="govuk-table__cell">£2000</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Insurance</th>
+              <td class="govuk-table__cell">-</td>
+              <td class="govuk-table__cell">-</td>
+              <td class="govuk-table__cell">£400</td>
+            </tr>
+
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"></th>
+              <td class="govuk-table__header">£10,000</td>
+              <td class="govuk-table__header">£11,500</td>
+              <td class="govuk-table__header">£16,450</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Features</th>
+              <td class="govuk-table__cell"></td>
+              <td class="govuk-table__cell"></td>
+              <td class="govuk-table__cell"></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">FTA</th>
+              <td class="govuk-table__cell">Yes</td>
+              <td class="govuk-table__cell">No</td>
+              <td class="govuk-table__cell">No</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Rules or origin</th>
+              <td class="govuk-table__cell">Yes when FTA</td>
+              <td class="govuk-table__cell">No</td>
+              <td class="govuk-table__cell">No</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"></th>
+              <td class="govuk-table__cell">
+                <button class="govuk-button govuk-button--secondary comparison" data-module="govuk-button">
+                  Select Incoterm
+                </button>
+              </td>
+              <td class="govuk-table__cell">
+                <button class="govuk-button comparison" data-module="govuk-button">
+                  Select Incoterm
+                </button>
+              </td>
+              <td class="govuk-table__cell">
+                <button class="govuk-button govuk-button--secondary comparison" data-module="govuk-button">
+                  Select Incoterm
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
   </div>
 
   
