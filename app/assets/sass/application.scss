@@ -38,6 +38,10 @@ box-sizing: border-box;
 padding: 0 15px;
 }
 
+.border.govuk-grid-column-two-fifths, .border.govuk-grid-column-one-fifth {
+  border-top: grey 1px solid;
+  }
+
 /* Action links that are right alignhed to a header...both sites*/
 .right-aligned-link {
  float: right;
@@ -187,6 +191,19 @@ padding: 0 15px;
  line-height: 45px;
  margin-right: 0px;
 }
+
+// CSS for the incoterms select on the compare page
+.grid.horizontal .select {
+  height: 45px;
+  margin: 2px 0 20px 0;
+  align-self: center;
+
+ }
+
+ .select .govuk-select {
+  min-width: 20px;
+ }
+
 
 
 
