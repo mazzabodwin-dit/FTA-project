@@ -19,6 +19,12 @@
       <h1 class="govuk-heading-l">Compare
       </h1>
       <p>Some lovely words about what the hell is going on.gdfljkljikf</p>
+      <h2 class="govuk-heading-s">[Product name]
+        <span class="edit-link govuk-body">
+          <a href="step1" class="govuk-link--no-visited-state">Change product</a>
+        </span>
+      </h2>
+      <p>Product description, product description p[roduct description.</p>
     </div>
   </div>
 
@@ -127,13 +133,13 @@
               <div class="chart-wrap right">
                 <div class="grid horizontal">
                   {% if data['inco'] == "FOB" %}
-                    <div class="bar govuk-body" data-name="£12,500" title="£11,500"></div>
+                    <div class="bar govuk-body" data-name="£10,500" title="£10,500"></div>
                     {% else %}
                     {% if data['inco'] == "CIF" %}
-                      <div class="bar govuk-body" data-name="£20,450" title="£11,500"></div>
+                      <div class="bar govuk-body" data-name="£14,500" title="£14,500"></div>
                       {% else %}
                       {% if data['inco'] == "Ex-works" %}
-                        <div class="bar govuk-body" data-name="£10,000" title="£11,500"></div>
+                        <div class="bar govuk-body" data-name="£10,000" title="£10,000"></div>
                       {% endif %}
                     {% endif %}
                   {% endif %}
