@@ -37,7 +37,7 @@ $(document).ready(function () {
           // Search for case/ commodity in Public files - setting the div to show the option value
           let commodity_wrapper_id = 'selected_commodity_wrapper'
           let commodity_wrapper_element = $('#' + commodity_wrapper_id)
-          let selected_commodity_element = commodity_wrapper_element.find('a#selected_commodity')
+          let selected_commodity_element = commodity_wrapper_element.find('li#selected_commodity')
 
           let commodity_li_id = "selected_commodity2"
           let commodity_li_id_element = $('#' + commodity_li_id)

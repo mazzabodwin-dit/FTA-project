@@ -18,13 +18,12 @@
       <span class="govuk-caption-l">Step 3</span>
       <h1 class="govuk-heading-l">Compare
       </h1>
-      <p>Some lovely words about what the hell is going on.gdfljkljikf</p>
-      <h2 class="govuk-heading-s">[Product name]
-        <span class="edit-link govuk-body">
+     <h2 class="govuk-heading-m">{{data['product']}}
+        <span class="edit-link right-aligned-link govuk-body">
           <a href="step1" class="govuk-link--no-visited-state">Change product</a>
         </span>
       </h2>
-      <p>Product description, product description p[roduct description.</p>
+      <p>For your product and market compare against other existing markets.</p>
     </div>
   </div>
 
@@ -78,13 +77,11 @@
               {% endif %}
             {% endif %}
           {% endif %}
-          <div class="bar govuk-body" style="--bar-value:23%;" data-name="23%" title="Medium 23%"></div>
-          <div class="bar govuk-body" style="--bar-value:7%;" data-name="7%" title="Tumblr 7%"></div>
-          <div class="bar govuk-body" style="--bar-value:38%;" data-name="38%" title="Facebook 38%"></div>
-          <div class="bar govuk-body" style="--bar-value:35%;" data-name="35%" title="YouTube 35%"></div>
-          <div class="bar govuk-body" style="--bar-value:30%;" data-name="30%" title="LinkedIn 30%"></div>
-          <div class="bar govuk-body" style="--bar-value:5%;" data-name="5%" title="Twitter 5%"></div>
-          <div class="bar govuk-body" style="--bar-value:20%;" data-name="20%" title="Other 20%"></div>
+
+          <div class="bar govuk-body" style="--bar-value:10%;" data-name="10%" title="Tarrif MFN 10%"></div>
+          <div class="bar govuk-body" style="--bar-value:4.8%;" data-name="4.8%" title="Economic growth 4.8%"></div>
+          <div class="bar govuk-body" style="--bar-value:47%;" data-name="47th" title="47th ranking of UK export market"></div>
+          <div class="bar govuk-body" style="--bar-value:38%;" data-name="38%" title="38% of all UK exports"></div>
         </div>
       </div>
     </div>
@@ -102,13 +99,10 @@
               <option {{ "selected" if data["inco"] == "Ex-works" }} value="?inco=Ex-works">Ex-works</option>
             </select>
           </div>
-          <div class="bar govuk-body">Medium</div>
-          <div class="bar govuk-body">Tumblr</div>
-          <div class="bar govuk-body">Facebook</div>
-          <div class="bar govuk-body">YouTube</div>
-          <div class="bar govuk-body">LinkedIn</div>
-          <div class="bar govuk-body">Twitter</div>  
-          <div class="bar govuk-body">Other</div>          
+          <div class="bar govuk-body">Tarrif</div>
+          <div class="bar govuk-body">Economic growth</div>
+          <div class="bar govuk-body">Ranked market</div>
+          <div class="bar govuk-body">% of all UK exports</div>
         </div>
       </div>
     </div>
@@ -119,13 +113,13 @@
             <div class="chart-wrap right empty">
               <div class="grid horizontal">
                 <div class="bar govuk-body" data-name="£"></div>
-                <div class="bar govuk-body" style="--bar-value:25%;" title="Medium 25%"></div>
-                <div class="bar govuk-body" style="--bar-value:25%;" title="Tumblr 25%"></div>
-                <div class="bar govuk-body" style="--bar-value:25%;" title="Facebook 25%"></div>
-                <div class="bar govuk-body" style="--bar-value:25%;" title="YouTube 25%"></div>
-                <div class="bar govuk-body" style="--bar-value:25%;" title="LinkedIn 25%"></div>
-                <div class="bar govuk-body" style="--bar-value:25%;" title="Twitter 25%"></div>
-                <div class="bar govuk-body" style="--bar-value:25%;" title="Other 25%"></div>
+                <div class="bar govuk-body" style="--bar-value:25%;"></div>
+                <div class="bar govuk-body" style="--bar-value:25%;"></div>
+                <div class="bar govuk-body" style="--bar-value:25%;"></div>
+                <div class="bar govuk-body" style="--bar-value:25%;"></div>
+                <div class="bar govuk-body" style="--bar-value:25%;"></div>
+                <div class="bar govuk-body" style="--bar-value:25%;"></div>
+                <div class="bar govuk-body" style="--bar-value:25%;"></div>
               </div>
             </div>
             {% else %}
@@ -143,13 +137,10 @@
                       {% endif %}
                     {% endif %}
                   {% endif %}
-                  <div class="bar govuk-body" style="--bar-value:23%;" data-name="23%" title="Medium 23%"></div>
-                  <div class="bar govuk-body" style="--bar-value:14%;" data-name="14%" title="Tumblr 14%"></div>
-                  <div class="bar govuk-body" style="--bar-value:17%;" data-name="17%" title="Facebook 17%"></div>
-                  <div class="bar govuk-body" style="--bar-value:67%;" data-name="67%" title="YouTube 67%"></div>
-                  <div class="bar govuk-body" style="--bar-value:43%;" data-name="43%" title="LinkedIn 43%"></div>
-                  <div class="bar govuk-body" style="--bar-value:76%;" data-name="76%" title="Twitter 76%"></div>
-                  <div class="bar govuk-body" style="--bar-value:01%;" data-name="01%" title="Other 01%"></div>
+                  <div class="bar govuk-body" style="--bar-value:10%;" data-name="12%" title="Tarrif MFN 12%"></div>
+                  <div class="bar govuk-body" style="--bar-value:12.1%;" data-name="12.1%" title="Economic growth 12.1%"></div>
+                  <div class="bar govuk-body" style="--bar-value:23%;" data-name="23rd" title="23rd ranked market"></div>
+                  <div class="bar govuk-body" style="--bar-value:21%;" data-name="21%" title="21% of all UK exports"></div>
                 </div>
               </div>
               {% else %}
@@ -167,13 +158,10 @@
                         {% endif %}
                       {% endif %}
                     {% endif %}
-                    <div class="bar govuk-body" style="--bar-value:53%;" data-name="54%" title="Medium 54%"></div>
-                    <div class="bar govuk-body" style="--bar-value:31%;" data-name="31%" title="Tumblr 31%"></div>
-                    <div class="bar govuk-body" style="--bar-value:49%;" data-name="49%" title="Facebook 49%"></div>
-                    <div class="bar govuk-body" style="--bar-value:05%;" data-name="5%" title="YouTube 5%"></div>
-                    <div class="bar govuk-body" style="--bar-value:21%;" data-name="21%" title="LinkedIn 21%"></div>
-                    <div class="bar govuk-body" style="--bar-value:76%;" data-name="76%" title="Twitter 76%"></div>
-                    <div class="bar govuk-body" style="--bar-value:34%;" data-name="34%" title="Other 34%"></div>
+                    <div class="bar govuk-body" style="--bar-value:20%;" data-name="20%" title="Tarrif MFN %20"></div>
+                    <div class="bar govuk-body" style="--bar-value:9.3%;" data-name="9.3%" title="Economic growth 9.3%"></div>
+                    <div class="bar govuk-body" style="--bar-value:12%;" data-name="12th" title="12rd ranked market"></div>
+                    <div class="bar govuk-body" style="--bar-value:4.5%;" data-name="4.5%" title="4.5% of all UK exports"></div>
                   </div>
                 </div>
               {% endif %}
