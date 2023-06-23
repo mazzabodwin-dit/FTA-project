@@ -15,13 +15,13 @@
 {% block content %}
 
  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-grid-column-full">
 
       <h1 class="govuk-heading-l">
         <span class="govuk-caption-l">Step 2</span>
         Experience, effort and risk 
       </h1>
-      <p>According to your experience and the amount of effort and risk you are willing to accept there are different ways to export goods abroad.</p>
+      <p>These questions will help us understand your experience and approach in exporting. We’ll use your answers to suggest the most appropriate trade terms and related costs. These are known as Incoterms. <a href="">Learn more about Incoterms</a>.</p>
 
       <form action="step2-1-market-inco" method="post">
 
@@ -30,7 +30,7 @@
           name: "confidence",
           fieldset: {
             legend: {
-              text: "Rate your confidence in exporting ",
+              text: "How confident are you in exporting goods?",
               isPageHeading: false,
               classes: "govuk-fieldset__legend--s"
             }
@@ -57,7 +57,7 @@
           name: "capacity",
           fieldset: {
             legend: {
-              text: "Rate your capacity/ desire?? to organise everything without the use of a 3rd party",
+              text: "How likely is it you will use a 3rd party to arrange the export of your goods?",
               isPageHeading: false,
               classes: "govuk-fieldset__legend--s"
             }
@@ -65,16 +65,16 @@
           items: [
             {
               value: "Low",
-              text: "Low"
+              text: "Not likely"
             },
             {
               value: "Medium",
-              text: "Medium"
+              text: "Likely"
             }
             ,
             {
               value: "High",
-              text: "High"
+              text: "Highly likely"
             }
           ]
         }) }}
@@ -84,7 +84,7 @@
           name: "risk",
           fieldset: {
             legend: {
-              text: "Rate how confident your are in taking on the risk and responsibility of exporting the goods to the final destination market",
+              text: "How confident do you feel about taking on the risk and responsibility of making sure your goods arrive at their final destination?",
               isPageHeading: false,
               classes: "govuk-fieldset__legend--s"
             }

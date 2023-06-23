@@ -16,9 +16,9 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
       <span class="govuk-caption-l">Step 3</span>
-      <h1 class="govuk-heading-l">Comparable markets
+      <h1 class="govuk-heading-l">Compare your export opportunity
       </h1>
-      <p>For your product and market compare against other existing markets.</p>
+      <p>Based on the information you’ve provided, compare the costs of your export opportunity with other markets.</p>
     </div>
   </div>
 
@@ -67,10 +67,10 @@
             {% endif %}
           {% endif %}
 
-          <div class="bar govuk-body" style="--bar-value:10%;" data-name="10%" title="Tarrif MFN 10%"></div>
-          <div class="bar govuk-body" style="--bar-value:4.8%;" data-name="4.8%" title="Economic growth 4.8%"></div>
-          <div class="bar govuk-body" style="--bar-value:47%;" data-name="47th" title="47th ranking of UK export market"></div>
-          <div class="bar govuk-body" style="--bar-value:38%;" data-name="38%" title="38% of all UK exports"></div>
+          <div class="bar govuk-body" style="--bar-value:10%;" data-name="10%" title="MFN Tariff rate 10%"></div>
+          <div class="bar govuk-body" style="--bar-value:11%;" data-name="11%" title="VAT 11%"></div>
+          <div class="bar govuk-body" style="--bar-value:56%;" data-name="56th" title="Ranked market 56th"></div>
+          <div class="bar govuk-body" style="--bar-value:0.2%;" data-name="0.2%" title="% of UK export market%"></div>
         </div>
       </div>
     </div>
@@ -88,8 +88,8 @@
               <option {{ "selected" if data["inco"] == "Ex-works" }} value="?inco=Ex-works">Ex-works</option>
             </select>
           </div>
-          <div class="bar govuk-body">Tarrif</div>
-          <div class="bar govuk-body">Economic growth</div>
+          <div class="bar govuk-body">MFN Tariff rate</div>
+          <div class="bar govuk-body">VAT</div>
           <div class="bar govuk-body">Ranked market</div>
           <div class="bar govuk-body">% of all UK exports</div>
         </div>
@@ -123,10 +123,10 @@
                       {% endif %}
                     {% endif %}
                   {% endif %}
-                  <div class="bar govuk-body" style="--bar-value:0.1%;" data-name="0%" title="Tarif 0%"></div>
-                  <div class="bar govuk-body" style="--bar-value:12.1%;" data-name="12.1%" title="Economic growth 12.1%"></div>
-                  <div class="bar govuk-body" style="--bar-value:23%;" data-name="23rd" title="23rd ranked market"></div>
-                  <div class="bar govuk-body" style="--bar-value:21%;" data-name="21%" title="21% of all UK exports"></div>
+                  <div class="bar govuk-body" style="--bar-value:0.1%;" data-name="0%" title="MFN Tariff rate 0%"></div>
+                  <div class="bar govuk-body" style="--bar-value:12.1%;" data-name="12.1%" title="VAT 12.1%"></div>
+                  <div class="bar govuk-body" style="--bar-value:23%;" data-name="23rd" title="Ranked market"></div>
+                  <div class="bar govuk-body" style="--bar-value:21%;" data-name="21%" title="21% of UK export market"></div>
                 </div>
               </div>
               {% else %}
@@ -144,10 +144,10 @@
                         {% endif %}
                       {% endif %}
                     {% endif %}
-                    <div class="bar govuk-body" style="--bar-value:20%;" data-name="20%" title="Tarif 20%"></div>
-                    <div class="bar govuk-body" style="--bar-value:9.3%;" data-name="9.3%" title="Economic growth 9.3%"></div>
-                    <div class="bar govuk-body" style="--bar-value:12%;" data-name="12th" title="12rd ranked market"></div>
-                    <div class="bar govuk-body" style="--bar-value:4.5%;" data-name="4.5%" title="4.5% of all UK exports"></div>
+                    <div class="bar govuk-body" style="--bar-value:20%;" data-name="20%" title="MFN Tariff rate 20%"></div>
+                    <div class="bar govuk-body" style="--bar-value:9.3%;" data-name="9.3%" title="VAT 9.3%"></div>
+                    <div class="bar govuk-body" style="--bar-value:12%;" data-name="12th" title="Ranked market"></div>
+                    <div class="bar govuk-body" style="--bar-value:4.5%;" data-name="4.5%" title="4.5% of UK export market"></div>
                   </div>
                 </div>
               {% endif %}
