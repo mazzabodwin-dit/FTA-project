@@ -16,13 +16,9 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
       <span class="govuk-caption-l">Step 3</span>
-      <h1 class="govuk-heading-l">Compare
+      <h1 class="govuk-heading-l">Comparable markets
       </h1>
-     <h2 class="govuk-heading-m">{{data['product']}}
-        <span class="edit-link right-aligned-link govuk-body">
-          <a href="step1" class="govuk-link--no-visited-state">Change product</a>
-        </span>
-      </h2>
+     
       <p>For your product and market compare against other existing markets.</p>
     </div>
   </div>
@@ -32,9 +28,6 @@
       <h2 class="govuk-heading-m govuk-!-text-align-right">Mexico
         
       </h2>
-      <p class="govuk-body govuk-!-text-align-right ">
-          <a href="step1" class="govuk-link--no-visited-state">Change market</a>
-        </p>
     </div>
     <div class="govuk-grid-column-one-fifth">
       <h2 class="govuk-heading-m hide">Values</h2>
@@ -48,13 +41,10 @@
           <option {{ "selected" if data["country"] == "Select" }} value="?country=Select" value="Select">Select</option>
           <optgroup label="FTA Partners">
             <option {{ "selected" if data["country"] == "Australia" }} value="?country=Australia">Australia</option>
-            <option {{ "selected" if data["country"] == "Brunei" }} value="?country=Brunei">Brunei</option>
-            <option {{ "selected" if data["country"] == "Cambodia" }} value="?country=Cambodia">Cambodia</option>
           </optgroup>
           <option>----------</option>
           <optgroup label="Non-FTA Partners">
-            <option {{ "selected" if data["country"] == "Afghanistan" }} value="?country=Afghanistan">Afghanistan</option>  
-            <option {{ "selected" if data["country"] == "Aland Islands"  }} value="?country=Aland Islands">Aland Islands</option>
+            <option {{ "selected" if data["country"] == "Columbia" }} value="?country=Columbia">Columbia</option>
           </optgroup>
         </select>
       </div>
@@ -117,9 +107,6 @@
                 <div class="bar govuk-body" style="--bar-value:25%;"></div>
                 <div class="bar govuk-body" style="--bar-value:25%;"></div>
                 <div class="bar govuk-body" style="--bar-value:25%;"></div>
-                <div class="bar govuk-body" style="--bar-value:25%;"></div>
-                <div class="bar govuk-body" style="--bar-value:25%;"></div>
-                <div class="bar govuk-body" style="--bar-value:25%;"></div>
               </div>
             </div>
             {% else %}
@@ -137,14 +124,14 @@
                       {% endif %}
                     {% endif %}
                   {% endif %}
-                  <div class="bar govuk-body" style="--bar-value:10%;" data-name="12%" title="Tarrif MFN 12%"></div>
+                  <div class="bar govuk-body" style="--bar-value:0.1%;" data-name="0%" title="Tarif 0%"></div>
                   <div class="bar govuk-body" style="--bar-value:12.1%;" data-name="12.1%" title="Economic growth 12.1%"></div>
                   <div class="bar govuk-body" style="--bar-value:23%;" data-name="23rd" title="23rd ranked market"></div>
                   <div class="bar govuk-body" style="--bar-value:21%;" data-name="21%" title="21% of all UK exports"></div>
                 </div>
               </div>
               {% else %}
-              {% if data['country'] == "Brunei" %}
+              {% if data['country'] == "Columbia" %}
                 <div class="chart-wrap right">
                   <div class="grid horizontal">
                     {% if data['inco'] == "FOB" %}
@@ -158,7 +145,7 @@
                         {% endif %}
                       {% endif %}
                     {% endif %}
-                    <div class="bar govuk-body" style="--bar-value:20%;" data-name="20%" title="Tarrif MFN %20"></div>
+                    <div class="bar govuk-body" style="--bar-value:20%;" data-name="20%" title="Tarif 20%"></div>
                     <div class="bar govuk-body" style="--bar-value:9.3%;" data-name="9.3%" title="Economic growth 9.3%"></div>
                     <div class="bar govuk-body" style="--bar-value:12%;" data-name="12th" title="12rd ranked market"></div>
                     <div class="bar govuk-body" style="--bar-value:4.5%;" data-name="4.5%" title="4.5% of all UK exports"></div>

@@ -21,14 +21,11 @@
       </h1>
       <h2 class="govuk-heading-m">{{data['product']}}
         <span class="edit-link right-aligned-link govuk-body">
-          <a href="step1" class="govuk-link--no-visited-state">Change product</a>
+          <a href="step1" class="govuk-link--no-visited-state">Change <span class="govuk-visually-hidden">product</span></a>
         </span>
       </h2>
       <p>Product description, product description product description.</p>
-      {{ govukButton({
-        text: "Calculate export costs",
-        href: "step2"
-      }) }}
+      
     </div>
   </div>
 
@@ -36,7 +33,7 @@
     <div class="govuk-grid-column-full">
       <h2 class="govuk-heading-m">Mexico
         <span class="edit-link right-aligned-link govuk-body">
-          <a href="step1" class="govuk-link--no-visited-state">Change market</a>
+          <a href="step1" class="govuk-link--no-visited-state">Change <span class="govuk-visually-hidden">market</span></a>
         </span>
       </h2>
       <p>Mexico is a North American country south of the United States. The World Bank now classes Mexico as an upper-middle-income country and the economically active population continues to grow. Mexico is a strategic gateway, to both the US and Canada and the rest of Latin America. </p>
@@ -56,7 +53,6 @@
         </div>
       </div>
     </div>
-    
 
     <div class="govuk-grid-column-two-fifths">
       <div class="chart-wrap right">
@@ -67,8 +63,7 @@
           <div class="bar govuk-body" style="--bar-value:38%;" data-name="38%" title="UK exports to Mexico 38%"></div>
         </div>
       </div>
-    </div>
-        
+    </div>        
     
   </div>
 

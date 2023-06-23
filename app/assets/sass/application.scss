@@ -82,6 +82,22 @@ padding: 0 15px;
  background: repeating-linear-gradient(0deg, transparent, transparent 19.5%, rgba(170, 170, 170, 0.7) 10%);
 }
 
+.recommended  {
+  background-color: #d2a2b8;
+  border: none;
+  text-align: center;
+ }
+
+ .other  {
+  background-color: #f3f2f1;
+  text-align: center;
+ }
+
+ .other-header  {
+  background-color: white;
+  text-align: center;
+ }
+
 .value .grid .bar {
  width: 45px;
  //border-radius: 3px 3px 0 0;
@@ -103,11 +119,6 @@ padding: 0 15px;
 
 .empty .grid .bar  {
   background-color: #f3f2f1;
- }
-
- .recommended  {
-  background-color: #d2a2b8;
-  padding: 5px;
  }
 
 .grid .bar.bar:hover {

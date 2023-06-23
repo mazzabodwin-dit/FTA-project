@@ -19,8 +19,11 @@
       <span class="govuk-caption-l">Step 2</span>
       Choose your buying and selling responsibilities
       </h1>
+      <div class="govuk-inset-text">
+        Based on your information:
+        <br>Your export costs would be appox <strong>£11,500</strong> using <strong>FOB Incoterms</strong>.
+      </div>
       <p>Incoterms specify who is responsible for paying for and managing the shipment, insurance, documentation, customs clearance, and other logistical activities.</p>
-      <p>Based on your information, we would recommend using <strong>FOB</strong> Incoterms. Use the jobby below to compare differnt Incoterms.</p>
       <details class="govuk-details" data-module="govuk-details">
         <summary class="govuk-details__summary">
           <span class="govuk-details__summary-text">
@@ -40,61 +43,84 @@
           <caption class="govuk-table__caption govuk-table__caption--m">Incoterm comparison</caption>
           <thead class="govuk-table__head">
             <tr class="govuk-table__row">
-              <th scope="col" class="govuk-table__header"><span class="govuk-visually-hidden">Value: </span></th>
-              <th scope="col" class="govuk-table__header">Ex-works</th>
-              <th scope="col" class="govuk-table__header"><span class="recommended">FOB</span></th>
-              <th scope="col" class="govuk-table__header">CIF Landed</th>
+              <th scope="col" class="govuk-table__header other-header"><span class="govuk-visually-hidden">Value: </span></th>
+              <th scope="col" class="govuk-table__header other-header">
+               Ex-works</span>
+                <br> <br>
+                 <span class="govuk-body">£10,000</span>
+                 <br>
+                <button class="govuk-button govuk-button--secondary comparison" data-module="govuk-button">
+                  Select Incoterm
+                </button>
+              </th>
+              <th scope="col" class="govuk-table__header recommended">FOB
+                <br> <br>
+                <span class="govuk-body">£11,500</span>
+                <br>
+                <button class="govuk-button  comparison" data-module="govuk-button">
+                  Select Incoterm
+                </button>
+              </th>
+              <th scope="col" class="govuk-table__header other-header">CIF Landed
+                <br> <br>
+                <span class="govuk-body">£16,450</span>
+                <br>
+                <button class="govuk-button govuk-button--secondary comparison" data-module="govuk-button">
+                  Select Incoterm
+                </button>
+              </th>
             </tr>
           </thead>
           <tbody class="govuk-table__body">
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">Costs (approximate)</th>
               <td class="govuk-table__cell"></td>
-              <td class="govuk-table__cell"></td>
+              <td class="govuk-table__cell recommended"></td>
               <td class="govuk-table__cell"></td>
             </tr>
             <tr class="govuk-table__row">
               <td class="govuk-table__cell">Invoice price</th>
-              <td class="govuk-table__cell">£10,000</td>
-              <td class="govuk-table__cell">£10,000</td>
-              <td class="govuk-table__cell">£10,000</td>
+              <td class="govuk-table__cell other">£10,000</td>
+              <td class="govuk-table__cell recommended">£10,000</td>
+              <td class="govuk-table__cell other">£10,000</td>
             </tr>
             <tr class="govuk-table__row">
               <td class="govuk-table__cell">Customs *MFN 10% duty</th>
-              <td class="govuk-table__cell">-</td>
-              <td class="govuk-table__cell">£1,000</td>
-              <td class="govuk-table__cell">£1,000</td>
+              <td class="govuk-table__cell other">-</td>
+              <td class="govuk-table__cell recommended">£1,000</td>
+              <td class="govuk-table__cell other">£1,000</td>
             </tr>
             <tr class="govuk-table__row">
               <td class="govuk-table__cell">Taxes *VAT 20%</th>
-              <td class="govuk-table__cell">-</td>
-              <td class="govuk-table__cell">-</td>
-              <td class="govuk-table__cell">£2,200</td>
+              <td class="govuk-table__cell other">-</td>
+              <td class="govuk-table__cell recommended">-</td>
+              <td class="govuk-table__cell other">£2,200</td>
             </tr>
             <tr class="govuk-table__row">
               <td class="govuk-table__cell">Handling</th>
-              <td class="govuk-table__cell">-</td>
-              <td class="govuk-table__cell">£500</td>
-              <td class="govuk-table__cell">£500</td>
+              <td class="govuk-table__cell other">-</td>
+              <td class="govuk-table__cell recommended">£500</td>
+              <td class="govuk-table__cell other">£500</td>
             </tr>
             <tr class="govuk-table__row">
               <td class="govuk-table__cell">Shipping</th>
-              <td class="govuk-table__cell">-</td>
-              <td class="govuk-table__cell">-</td>
-              <td class="govuk-table__cell">£2000</td>
+              <td class="govuk-table__cell other">-</td>
+              <td class="govuk-table__cell recommended">-</td>
+              <td class="govuk-table__cell other">£2000</td>
             </tr>
             <tr class="govuk-table__row">
               <td class="govuk-table__cell">Insurance</th>
-              <td class="govuk-table__cell">-</td>
-              <td class="govuk-table__cell">-</td>
-              <td class="govuk-table__cell">£400</td>
+              <td class="govuk-table__cell other">-</td>
+              <td class="govuk-table__cell recommended">-</td>
+              <td class="govuk-table__cell other">£400</td>
             </tr>
 
+            <!--
             <tr class="govuk-table__row">
               <td class="govuk-table__cell"></th>
-              <td class="govuk-table__header">£10,000</td>
-              <td class="govuk-table__header"><span class="recommended">£11,500</span></td>
-              <td class="govuk-table__header">£16,450</td>
+              <td class="govuk-table__header other">£10,000</td>
+              <td class="govuk-table__header recommended"><span class="recommended">£11,500</span></td>
+              <td class="govuk-table__header other">£16,450</td>
             </tr>
              <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">Responsibilities</th>
@@ -137,7 +163,7 @@
                   Select Incoterm
                 </button>
               </td>
-            </tr>
+            </tr>-->
           </tbody>
         </table>
       </form>
